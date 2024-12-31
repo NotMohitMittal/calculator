@@ -15,36 +15,77 @@
     <div id="card_container">
         <div id="calculator_contents">
             <div id="number_holder">
-                <input type="text" placeholder="0" id="textField" spellcheck="false">
+                <input type="text" placeholder="0" id="textField" spellcheck="false" readonly>
             </div>
 
             <div class="keypad">
-                <div id="key_clear" class="numbers"> AC </div>
-                <div id="some_key" class="numbers">   x²</div>
-                <div id="key_percent" class="numbers"> % </div>
-                <div id="key_divide" class="numbers"> ÷ </div>
-                <div id="key_seven" class="numbers"> 7 </div>
-                <div id="key_eight" class="numbers"> 8 </div>
-                <div id="key_nine" class="numbers"> 9 </div>
-                <div id="key_multiply" class="numbers"> X </div>
-                <div id="key_four" class="numbers"> 4</div>
-                <div id="key_five" class="numbers"> 5 </div>
-                <div id="key_six" class="numbers"> 6 </div>
-                <div id="key_sub" class="numbers"> - </div>
-                <div id="key_one" class="numbers"> 1 </div>
-                <div id="key_two" class="numbers"> 2 </div>
-                <div id="key_three" class="numbers"> 3 </div>
-                <div id="key_sum" class="numbers"> + </div>
-                <div id="key_calculatorLogo" class="numbers"> <span class="material-symbols-outlined"> calculate </span> </div>
-                <div id="key_zero" class="numbers"> 0 </div>
-                <div id="key_point" class="numbers"> . </div>
-                <div id="key_equals" class="numbers"> = </div>
+                <div id="key_clear" class="numbers" onclick="CurrentDisplayValue = '';
+                document.querySelector('#textField').value=CurrentDisplayValue"> AC </div>
+
+                <div id="some_key" class="numbers" onclick="CurrentDisplayValue *= CurrentDisplayValue;
+                document.querySelector('#textField').value=CurrentDisplayValue"> x² </div>  <!--This has some bugs-->
+
+                <div id="key_percent" class="numbers" onclick="CurrentDisplayValue += '7';
+                document.querySelector('#textField').value=CurrentDisplayValue"> % </div>
+
+                <div id="key_divide" class="numbers" onclick="CurrentDisplayValue += '/';
+                document.querySelector('#textField').value=CurrentDisplayValue"> ÷ </div>
+
+                <div id="key_seven" class="numbers" onclick="CurrentDisplayValue += '7';
+                document.querySelector('#textField').value=CurrentDisplayValue"> 7 </div>
+
+                <div id="key_eight" class="numbers" onclick="CurrentDisplayValue += '8';
+                document.querySelector('#textField').value=CurrentDisplayValue"> 8 </div>
+
+                <div id="key_nine" class="numbers" onclick="CurrentDisplayValue += '9';
+                document.querySelector('#textField').value=CurrentDisplayValue"> 9 </div>
+
+                <div id="key_multiply" class="numbers" onclick="CurrentDisplayValue += '*';
+                document.querySelector('#textField').value=CurrentDisplayValue"> X </div>
+
+                <div id="key_four" class="numbers" onclick="CurrentDisplayValue += '4';
+                document.querySelector('#textField').value=CurrentDisplayValue"> 4</div>
+
+                <div id="key_five" class="numbers" onclick="CurrentDisplayValue += '5';
+                document.querySelector('#textField').value=CurrentDisplayValue"> 5 </div>    
+
+                <div id="key_six" class="numbers" onclick="CurrentDisplayValue += '6';
+                document.querySelector('#textField').value=CurrentDisplayValue"> 6 </div>
+
+                <div id="key_sub" class="numbers" onclick="CurrentDisplayValue += '-';
+                document.querySelector('#textField').value=CurrentDisplayValue"> - </div>
+
+                <div id="key_one" class="numbers" onclick="CurrentDisplayValue += '1';
+                document.querySelector('#textField').value=CurrentDisplayValue"> 1 </div>
+
+                <div id="key_two" class="numbers" onclick="CurrentDisplayValue += '2';
+                document.querySelector('#textField').value=CurrentDisplayValue"> 2 </div>   
+
+                <div id="key_three" class="numbers" onclick="CurrentDisplayValue += '3';
+                document.querySelector('#textField').value=CurrentDisplayValue"> 3 </div>
+
+                <div id="key_sum" class="numbers" onclick="CurrentDisplayValue += '+';
+                document.querySelector('#textField').value=CurrentDisplayValue"> + </div>
+
+                <div id="back_key" class="numbers" onclick="CurrentDisplayValue = CurrentDisplayValue.slice(0, -1);
+                document.querySelector('#textField').value=CurrentDisplayValue"> C </div>
+
+                <div id="key_zero" class="numbers" onclick="CurrentDisplayValue += '0';
+                document.querySelector('#textField').value=CurrentDisplayValue"> 0 </div>
+
+                <div id="key_point" class="numbers" onclick="CurrentDisplayValue += '.';
+                document.querySelector('#textField').value=CurrentDisplayValue"> . </div>
+
+                <div id="key_equals" class="numbers" onclick="CurrentDisplayValue = eval(CurrentDisplayValue);
+                document.querySelector('#textField').value=CurrentDisplayValue"> = </div>
     
             </div>
     
         </div>
 
     </div>
-
+    <script>
+        let CurrentDisplayValue = '';
+    </script>
 </body>
 </html>
