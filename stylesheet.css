@@ -81,7 +81,7 @@ body {
     
 }
 
-#key_seven, #key_eight, #key_nine, #key_four, #key_five, #key_six, #key_one, #key_two, #key_three, #key_calculatorLogo, #key_zero, #key_point {
+#key_seven, #key_eight, #key_nine, #key_four, #key_five, #key_six, #key_one, #key_two, #key_three, #back_key, #key_zero, #key_point {
     background-color: rgba(42,42,44,255); 
 }
 
