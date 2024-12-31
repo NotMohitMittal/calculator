@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    font-weight: 700;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    align-items: center;
+}
+
+#card_container {
+    height: 40%;
+    width: 60%;
+    background-color:rgba(0,1,1,255);
+    display: flex;
+    border-radius: 40px;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+}
+
+.keypad {
+    height: 70%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    top: 30%;
+    justify-items: center;
+    align-items: center;
+    min-height: 380px;
+    margin-bottom: 20px;
+    padding-bottom: 50px;
+}
+
+
+.numbers {
+    display: grid;
+    height: 90%;
+    width: 75%;
+    border: none;
+    border-radius: 50%;
+    text-align: center;
+    background-color: rgba(254,161,1,255);
+    align-items: center;
+    box-sizing: border-box;
+}
+
+#number_holder {
+    position: inherit;
+
+}
+
+#textField {
+    margin: 40% 0 5% 0;
+    background-color: inherit;
+    box-sizing: border-box; 
+    height: 6vh;
+    width: 100%;
+    position: relative;
+    
+    border: 0;
+    text-align: right;
+    font-size: 50px;
+    font-weight: 700;
+    color: white;
+    padding: 0 30px;
+    outline: none;
+}
+
+#calculator_contents {
+    height: 95%;
+    width: 75%;
+    min-height: 570px;
+    border-radius: 40px;
+    
+}
+
+#key_seven, #key_eight, #key_nine, #key_four, #key_five, #key_six, #key_one, #key_two, #key_three, #key_calculatorLogo, #key_zero, #key_point {
+    background-color: rgba(42,42,44,255); 
+}
+
+
+
